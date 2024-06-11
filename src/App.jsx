@@ -4,7 +4,19 @@ import Result from './components/Result.jsx';
 import RegisterUser from './components/RegisterUser.jsx';
 import LoginUser from "./components/LoginUser.jsx";
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <div>Hello world!</div>,
+    },
+  ]);
 
   const [todos, setTodos] = useState([]);
 
@@ -54,6 +66,7 @@ function App() {
 
   return (
     <>
+      <RouterProvider router={router} />
       <RegisterUser />
       <LoginUser />
       <pre>{JSON.stringify(todos, null, 2)}</pre>
