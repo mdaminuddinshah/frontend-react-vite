@@ -3,21 +3,10 @@ import Form from "./components/Form.jsx";
 import Result from './components/Result.jsx';
 import RegisterUser from './components/RegisterUser.jsx';
 import LoginUser from "./components/LoginUser.jsx";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { router } from './routers/Root.jsx';
 
 function App() {
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <div>Hello world!</div>,
-    },
-  ]);
-
   const [todos, setTodos] = useState([]);
 
   // just in case, for testing
