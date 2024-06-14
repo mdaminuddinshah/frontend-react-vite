@@ -13,22 +13,22 @@ export const routerList = [ {
   errorElement: <Error404 />
 },
 {
-  path: "home",
+  path: "/home",
   name: "Home",
   element: <Home />
 },
 {
-  path: "about",
+  path: "/about",
   name: "About",
   element: <About />
 },
 {
-    path: "profile",
+    path: "/profile",
     name: "Profile",
     element: <Profile />
 },
 {
-    path: "Contact",
+    path: "/Contact",
     name: "Contact",
     element: <Contact />
 }]
