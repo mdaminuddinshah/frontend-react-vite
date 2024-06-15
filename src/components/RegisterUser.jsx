@@ -42,7 +42,7 @@ function RegisterUser() {
             <input type="password" id="passwords" name="passwords" required/>
         </fieldset>
         <button type="submit">Submit</button>
-        {messages}
+        <p>message: {messages}</p>
     </form>
   )
 }
