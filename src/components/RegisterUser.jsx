@@ -1,7 +1,9 @@
 import {authRegister} from "../api/authRegister.js";
+import {useState} from "react";
 
 function RegisterUser() {
 
+    const [messages, setMessages] = useState("");
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -19,6 +21,7 @@ function RegisterUser() {
     });
 
     console.log(response.message);
+    setMessages(response.message);
 
       event.target.reset();
     }
@@ -39,6 +42,7 @@ function RegisterUser() {
             <input type="password" id="passwords" name="passwords" required/>
         </fieldset>
         <button type="submit">Submit</button>
+        {messages}
     </form>
   )
 }
