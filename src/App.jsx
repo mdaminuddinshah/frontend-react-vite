@@ -55,7 +55,7 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
       <RegisterUser />
       <LoginUser />
       <pre>{JSON.stringify(todos, null, 2)}</pre>

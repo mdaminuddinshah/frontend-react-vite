@@ -28,6 +28,7 @@ function RegisterUser() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Give some time bcs if buffering ..</h1>
         <h3>Register</h3>
         <fieldset>
             <label htmlFor="emails">Email: </label>
