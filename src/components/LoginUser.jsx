@@ -1,7 +1,9 @@
+import { useState } from "react";
 import {authLogin} from "../api/authLogin.js";
 
 function RegisterUser() {
 
+    const [messages, setMessages] = useState("");
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -18,6 +20,8 @@ function RegisterUser() {
 
     console.log(data)
     const token = data.token;
+
+    setMessages(data.message);
 
     window.localStorage.setItem("Token", token);
 
@@ -36,6 +40,7 @@ function RegisterUser() {
             <input type="password" id="password" name="password" required/>
         </fieldset>
         <button type="submit">Submit</button>
+        <p>message: {messages}</p>
     </form>
   )
 }
