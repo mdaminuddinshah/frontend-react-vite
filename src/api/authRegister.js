@@ -17,8 +17,7 @@ export const authRegister = async ({email,username, password}) => {
             })
         
             const res = await response.json();
-            console.log(response);
-            console.log(res);
+            return res;
 
     } catch(err){
         console.log(err)

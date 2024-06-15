@@ -3,7 +3,7 @@ import {authRegister} from "../api/authRegister.js";
 function RegisterUser() {
 
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
       event.preventDefault();
 
       const elements = event.target.elements
@@ -12,11 +12,13 @@ function RegisterUser() {
       const password = elements.passwords.value;
 
     // call API Register here  
-    authRegister({
+    const response = await authRegister({
         email,
         username,
         password,
     });
+
+    console.log(response.message);
 
       event.target.reset();
     }
